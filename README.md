@@ -1,4 +1,4 @@
-# 🚀 CodeLab Pro - Next Generation Code Execution Engine
+# 🚀 LabForCode - Next Generation Code Execution Engine
 
 **A high-performance, Judge0-compatible code execution platform built from scratch with modern technologies.**
 
@@ -10,13 +10,13 @@
 
 ---
 
-## 🎯 **What is CodeLab Pro?**
+## 🎯 **What is LabForCode?**
 
-CodeLab Pro is a **completely original**, high-performance code execution engine that provides **100% Judge0 API compatibility** while delivering superior performance, security, and modern architecture.
+LabForCode is a **completely original**, high-performance code execution engine that provides **100% Judge0 API compatibility** while delivering superior performance, security, and modern architecture.
 
-### **🏆 Why Choose CodeLab Pro Over Judge0?**
+### **🏆 Why Choose LabForCode Over Judge0?**
 
-| Feature                | Judge0              | CodeLab Pro                     | Advantage               |
+| Feature                | Judge0              | LabForCode                      | Advantage               |
 | ---------------------- | ------------------- | ------------------------------- | ----------------------- |
 | **Performance**        | Standard Ruby/Rails | **50% faster** with Rust engine | ✅ **2x Better**        |
 | **Memory Usage**       | 180MB average       | **95MB average**                | ✅ **47% Less**         |
@@ -99,7 +99,7 @@ pnpm dev
 
 ### **✅ 100% Compatible Endpoints**
 
-CodeLab Pro provides **complete Judge0 API compatibility** through `/api/compat/` endpoints:
+LabForCode provides **complete Judge0 API compatibility** through `/api/compat/` endpoints:
 
 ```bash
 # Create submission (async)
@@ -128,7 +128,7 @@ curl -X POST "http://localhost:3000/api/compat/submissions?wait=true" \
   -H "Content-Type: application/json" \
   -d '{
     "language_id": 71,
-    "source_code": "print(\"Hello from CodeLab Pro!\")",
+    "source_code": "print(\"Hello from LabForCode!\")",
     "stdin": ""
   }'
 ```
@@ -312,24 +312,24 @@ The `docker-compose.yml` includes:
 
 ```
 Judge0:         Average: 847ms, 95th percentile: 1.2s
-CodeLab Pro:    Average: 423ms, 95th percentile: 650ms
-Result:         🏆 CodeLab Pro is 50% faster
+LabForCode:    Average: 423ms, 95th percentile: 650ms
+Result:         🏆 LabForCode is 50% faster
 ```
 
 ### **💾 Memory Usage**
 
 ```
 Judge0:         Average: 180MB per container
-CodeLab Pro:    Average: 95MB per container
-Result:         🏆 CodeLab Pro uses 47% less memory
+LabForCode:    Average: 95MB per container
+Result:         🏆 LabForCode uses 47% less memory
 ```
 
 ### **⚡ Concurrent Processing**
 
 ```
 Judge0:         Max: ~50 concurrent jobs
-CodeLab Pro:    Max: ~200+ concurrent jobs
-Result:         🏆 CodeLab Pro handles 4x more load
+LabForCode:    Max: ~200+ concurrent jobs
+Result:         🏆 LabForCode handles 4x more load
 ```
 
 ---
@@ -424,7 +424,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### **⚖️ Legal Notice**
 
-**CodeLab Pro is a completely original implementation.** We did not copy, derive, or use any Judge0 source code. Our implementation is inspired by Judge0's public API documentation and built from scratch using our own architecture and technologies.
+**LabForCode is a completely original implementation.** We did not copy, derive, or use any Judge0 source code. Our implementation is inspired by Judge0's public API documentation and built from scratch using our own architecture and technologies.
 
 See [DISCLAIMER.md](DISCLAIMER.md) for complete legal information.
 
@@ -478,3 +478,5 @@ See [DISCLAIMER.md](DISCLAIMER.md) for complete legal information.
 ---
 
 **🚀 Ready to get started? Run `./start-windows.bat` and experience the future of code execution!**
+#   L a b F o r C o d e  
+ 
