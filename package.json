@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:railway": "NODE_ENV=production next build",
     "start": "next start",
+    "start:railway": "NODE_ENV=production next start",
     "lint": "next lint",
     "deploy": "railway up",
     "deploy:docker": "docker-compose -f docker-compose.production.yml up -d",

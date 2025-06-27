@@ -12,12 +12,18 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["pg", "bull", "ioredis"],
   },
+  // Railway-specific optimizations
+  output: "standalone",
+  poweredByHeader: false,
+  compress: true,
   env: {
     // Railway automatically provides these
     DATABASE_URL: process.env.DATABASE_URL,
     REDIS_URL: process.env.REDIS_URL,
     PORT: process.env.PORT || "3000",
     NODE_ENV: process.env.NODE_ENV || "production",
+    // Disable database connections during build
+    SKIP_DB_VALIDATION: "true",
   },
   webpack: (config, { isServer }) => {
     // Handle Monaco Editor on server-side
@@ -27,6 +33,9 @@ const nextConfig = {
         fs: false,
         path: false,
         crypto: false,
+        stream: false,
+        util: false,
+        buffer: false,
       };
     }
 
@@ -35,6 +44,11 @@ const nextConfig = {
       test: /\.worker\.js$/,
       use: { loader: "worker-loader" },
     });
+
+    // Handle pg native bindings
+    if (isServer) {
+      config.externals.push("pg-native");
+    }
 
     return config;
   },

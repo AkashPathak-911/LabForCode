@@ -1,0 +1,25 @@
+# Railway Build Configuration
+
+# This file forces Railway to use Nixpacks instead of Docker
+
+# Ignore all Docker files for Railway builds
+
+Dockerfile\*
+_.dockerfile
+docker-compose_.yml
+
+# Keep source code for Nixpacks
+
+!src/
+!app/
+!components/
+!lib/
+!hooks/
+!styles/
+!public/
+!package.json
+!pnpm-lock.yaml
+!next.config.mjs
+!tailwind.config.ts
+!tsconfig.json
+!.nixpacks.toml
