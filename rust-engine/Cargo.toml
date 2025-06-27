@@ -1,0 +1,65 @@
+[package]
+name = "coderunner-engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["CodeRunner Pro Team"]
+description = "High-performance code execution engine for CodeRunner Pro"
+
+[dependencies]
+# Web server
+axum = "0.7"
+tokio = { version = "1.0", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "fs"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+
+# Queue system
+redis = { version = "0.24", features = ["tokio-comp", "connection-manager"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+# Process management and sandboxing
+nix = "0.27"
+libc = "0.2"
+
+# System monitoring
+sysinfo = "0.30"
+
+# Async utilities
+futures = "0.3"
+tokio-stream = "0.1"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Time utilities
+chrono = { version = "0.4", features = ["serde"] }
+
+# Environment
+dotenv = "0.15"
+
+# HTTP client for callbacks
+reqwest = { version = "0.11", features = ["json"] }
+
+# ZIP and Base64 support
+base64 = "0.21"
+zip = "0.6"
+
+# Temporary files
+tempfile = "3.0"
+
+[dev-dependencies]
+
+[[bin]]
+name = "coderunner-engine"
+path = "src/main.rs"

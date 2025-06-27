@@ -1,0 +1,50 @@
+version: "3.8"
+
+# Minimal Docker Compose for Local Development
+# Only includes database and queue - no language containers needed!
+
+services:
+  # Database for persistence
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=codelab_pro
+      - POSTGRES_USER=codelab
+      - POSTGRES_PASSWORD=password123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - codelab-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U codelab -d codelab_pro"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # Job queue and caching
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - codelab-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  postgres_data:
+
+networks:
+  codelab-network:
+    driver: bridge
