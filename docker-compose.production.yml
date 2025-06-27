@@ -1,4 +1,4 @@
-# Production Docker Compose Configuration for CodeLab Pro
+# Production Docker Compose Configuration for LabForCode
 # Use this for full containerized production deployment
 
 version: "3.8"

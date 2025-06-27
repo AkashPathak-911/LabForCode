@@ -1,5 +1,5 @@
 /**
- * Rust Engine Client for CodeRunner Pro
+ * Rust Engine Client for LabForCode
  *
  * This module handles communication with the high-performance Rust execution engine.
  * The Rust engine provides better performance, security, and resource management

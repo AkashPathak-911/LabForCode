@@ -1,9 +1,9 @@
 [package]
-name = "coderunner-engine"
+name = "labforcode-engine"
 version = "0.1.0"
 edition = "2021"
-authors = ["CodeRunner Pro Team"]
-description = "High-performance code execution engine for CodeRunner Pro"
+authors = ["LabForCode Team"]
+description = "High-performance code execution engine for LabForCode"
 
 [dependencies]
 # Web server
@@ -61,5 +61,5 @@ tempfile = "3.0"
 [dev-dependencies]
 
 [[bin]]
-name = "coderunner-engine"
+name = "labforcode-engine"
 path = "src/main.rs"

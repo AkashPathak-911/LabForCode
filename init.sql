@@ -1,4 +1,4 @@
--- Initialize database for CodeRunner Pro
+-- Initialize database for LabForCode
 -- Note: UUID generation will use NEWID() instead of uuid-ossp extension
 
 -- Submissions table with full Judge0 compatibility

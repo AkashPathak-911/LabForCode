@@ -1,5 +1,5 @@
 /**
- * CodeRunner Pro Database Module
+ * LabForCode Database Module
  *
  * This is an ORIGINAL implementation built from scratch.
  * While it provides Judge0-compatible fields and APIs, it does NOT use

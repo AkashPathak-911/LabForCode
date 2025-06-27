@@ -2,7 +2,7 @@
 
 # Test script for CodeLabRunner
 
-echo "🧪 Testing CodeLab Pro platform..."
+echo "🧪 Testing LabForCode platform..."
 
 API_URL="http://localhost:3000"
 

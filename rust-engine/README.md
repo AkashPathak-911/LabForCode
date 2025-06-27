@@ -1,6 +1,6 @@
-# 🦀 CodeRunner Pro Rust Engine
+# 🦀 LabForCode Rust Engine
 
-A high-performance, memory-safe code execution engine built in Rust for CodeRunner Pro.
+A high-performance, memory-safe code execution engine built in Rust for LabForCode.
 
 ## 🚀 **Why Rust Engine?**
 
@@ -271,7 +271,7 @@ RUST_LOG=info cargo run
 
 ## 📄 **License**
 
-MIT License - Same as the main CodeRunner Pro project.
+MIT License - Same as the main LabForCode project.
 
 ---
 

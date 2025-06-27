@@ -1,6 +1,6 @@
-# CodeLab Pro Deployment Guide
+# LabForCode Deployment Guide
 
-## 🚀 **Deployment Options for CodeLab Pro**
+## 🚀 **Deployment Options for LabForCode**
 
 ### **1. Local Development (Windows)**
 
@@ -30,7 +30,7 @@ docker-compose up -d
 
 **Includes:**
 
-- ✅ CodeLab Pro API (TypeScript)
+- ✅ LabForCode API (TypeScript)
 - ✅ Rust execution engine
 - ✅ PostgreSQL database
 - ✅ Redis queue system

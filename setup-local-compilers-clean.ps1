@@ -1,12 +1,12 @@
-# CodeLab Pro - Local Compiler Setup Script
-# Configures CodeLab Pro to use your local compilers instead of Docker
+# LabForCode - Local Compiler Setup Script
+# Configures LabForCode to use your local compilers instead of Docker
 
-Write-Host "CodeLab Pro Local Compiler Setup" -ForegroundColor Cyan
+Write-Host "LabForCode Local Compiler Setup" -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
 
 # Check if we're in the right directory
 if (-not (Test-Path "package.json")) {
-    Write-Host "Please run this script from the CodeLab Pro root directory." -ForegroundColor Red
+    Write-Host "Please run this script from the LabForCode root directory." -ForegroundColor Red
     exit 1
 }
 
@@ -79,7 +79,7 @@ if (Test-Path ".env.local") {
 Write-Host "`nSETUP COMPLETE!" -ForegroundColor Green
 Write-Host "===============" -ForegroundColor Green
 
-Write-Host "`nCodeLab Pro is now configured for local compiler execution!" -ForegroundColor Green
+Write-Host "`nLabForCode is now configured for local compiler execution!" -ForegroundColor Green
 Write-Host "`nSupported languages on your system:" -ForegroundColor White
 foreach ($compiler in $compilers.GetEnumerator()) {
     if ($compiler.Value.available) {

@@ -1,5 +1,5 @@
 @echo off
-echo 🚀 Starting CodeLab Pro (Local Compiler Mode)...
+echo 🚀 Starting LabForCode (Local Compiler Mode)...
 echo =============================================
 
 echo.
@@ -33,11 +33,11 @@ echo ⏳ Waiting for services to be ready...
 timeout /t 15 /nobreak
 
 echo.
-echo 🌐 Opening CodeLab Pro in your browser...
+echo 🌐 Opening LabForCode in your browser...
 start http://localhost:3000
 
 echo.
-echo ✅ CodeLab Pro is now running in LOCAL MODE!
+echo ✅ LabForCode is now running in LOCAL MODE!
 echo.
 echo 📍 Access points:
 echo    - Web Interface: http://localhost:3000

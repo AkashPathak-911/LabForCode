@@ -1,4 +1,4 @@
-# CodeLab Pro Production Dockerfile
+# LabForCode Production Dockerfile
 FROM node:18-alpine
 
 # Set working directory

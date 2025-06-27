@@ -1,4 +1,4 @@
-# Railway Deployment Guide for CodeLab Pro
+# Railway Deployment Guide for LabForCode
 
 ## 🚂 Deploy to Railway (Recommended)
 
@@ -110,4 +110,4 @@ railway open
 - Limited execution time
 - No file system access
 
-Railway is perfect for CodeLab Pro! 🎯
+Railway is perfect for LabForCode! 🎯

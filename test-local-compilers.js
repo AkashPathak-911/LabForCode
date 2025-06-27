@@ -41,7 +41,7 @@ async function testCompiler(language, code, expectedOutput) {
 }
 
 async function runTests() {
-  console.log("🚀 CodeLab Pro Local Compiler Test");
+  console.log("🚀 LabForCode Local Compiler Test");
   console.log("==================================");
 
   // Test cases for available compilers

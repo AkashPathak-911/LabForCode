@@ -2,7 +2,7 @@
 
 ## 🏛️ ORIGINAL IMPLEMENTATION
 
-**CodeLab Pro is a completely original implementation built from scratch.**
+**LabForCode is a completely original implementation built from scratch.**
 
 ## ❌ WHAT WE DID NOT DO
 
@@ -59,4 +59,4 @@ If you have any questions about our implementation approach or legal compliance,
 
 ---
 
-**Judge0** is a trademark of its respective owners. CodeLab Pro is an independent project inspired by Judge0's public API design.
+**Judge0** is a trademark of its respective owners. LabForCode is an independent project inspired by Judge0's public API design.

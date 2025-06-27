@@ -35,7 +35,7 @@ async fn main() -> anyhow::Result<()> {
     // Load environment variables
     dotenv::dotenv().ok();
     
-    info!("🦀 Starting CodeRunner Pro Rust Engine");
+    info!("🦀 Starting LabForCode Rust Engine");
     
     // Initialize the execution engine
     let engine = Arc::new(ExecutionEngine::new().await?);

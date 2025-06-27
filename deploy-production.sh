@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# CodeLab Pro - Production Deployment Script
+# LabForCode - Production Deployment Script
 # Automated deployment for production environments
 
 set -e
 
-echo "🚀 CodeLab Pro Production Deployment"
+echo "🚀 LabForCode Production Deployment"
 echo "===================================="
 echo ""
 
@@ -44,7 +44,7 @@ echo "⚙️  Setting up production environment..."
 
 if [ ! -f ".env.production" ]; then
     cat > .env.production << EOF
-# CodeLab Pro - Production Configuration
+# LabForCode - Production Configuration
 NODE_ENV=production
 PORT=3000
 API_BASE_URL=http://localhost:3000
@@ -159,7 +159,7 @@ fi
 
 # Start application
 echo ""
-echo "🚀 Starting CodeLab Pro in production mode..."
+echo "🚀 Starting LabForCode in production mode..."
 echo ""
 echo "Application will be available at: http://localhost:3000"
 echo "API documentation: http://localhost:3000/api/health"

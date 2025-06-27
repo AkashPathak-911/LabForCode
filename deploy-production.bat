@@ -1,7 +1,7 @@
 @echo off
-REM CodeLab Pro - Windows Production Deployment Script
+REM LabForCode - Windows Production Deployment Script
 
-echo 🚀 CodeLab Pro Production Deployment
+echo 🚀 LabForCode Production Deployment
 echo ====================================
 echo.
 
@@ -89,7 +89,7 @@ if exist "test-local-compilers.js" (
 )
 
 echo.
-echo 🚀 Starting CodeLab Pro in production mode...
+echo 🚀 Starting LabForCode in production mode...
 echo.
 echo Application will be available at: http://localhost:3000
 echo API documentation: http://localhost:3000/api/health

@@ -21,7 +21,7 @@ pub struct CodeExecutor {
 impl CodeExecutor {
     /// Create a new code executor
     pub fn new() -> Result<Self> {
-        let temp_base = std::env::temp_dir().join("coderunner-rust");
+        let temp_base = std::env::temp_dir().join("labforcode-rust");
         fs::create_dir_all(&temp_base)?;
         
         let mut languages = HashMap::new();

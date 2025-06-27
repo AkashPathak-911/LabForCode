@@ -4,7 +4,7 @@
 
 set -e
 
-echo "🚀 Starting CodeLab Pro in production mode..."
+echo "🚀 Starting LabForCode in production mode..."
 
 # Wait for PostgreSQL
 echo "⏳ Waiting for PostgreSQL..."

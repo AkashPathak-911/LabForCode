@@ -1,4 +1,4 @@
--- CodeLab Pro - PostgreSQL Database Initialization
+-- LabForCode - PostgreSQL Database Initialization
 -- Compatible with PostgreSQL 15+
 
 -- Enable UUID extension
@@ -135,7 +135,7 @@ CREATE INDEX IF NOT EXISTS idx_submissions_finished_at ON submissions(finished_a
 -- Print success message
 DO $$
 BEGIN
-    RAISE NOTICE 'CodeLab Pro database initialized successfully!';
+    RAISE NOTICE 'LabForCode database initialized successfully!';
     RAISE NOTICE 'Tables created: submissions, languages, statuses, config';
     RAISE NOTICE 'Ready for local compiler execution with Judge0 compatibility';
 END $$;
