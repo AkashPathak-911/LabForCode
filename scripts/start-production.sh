@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Production startup script for CodeLabRunner
+# Production startup script for LabForCode
 
-echo "🚀 Starting CodeLab Pro in production mode..."
+echo "🚀 Starting LabForCode in production mode..."
 
 # Check if required environment variables are set
 if [ -z "$DATABASE_URL" ]; then
@@ -59,4 +59,4 @@ export NODE_ENV=production
 
 # Start the application
 echo "🎯 Starting Next.js application..."
-exec npm start
+exec pnpm start

@@ -1,12 +1,5 @@
-# Production multi-stage build
-FROM node:18-alpine AS builder
-
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production && npm cache clean --force
-
-# Production runtime with multiple language runtimes and Docker
-FROM node:18-alpine AS runtime
+# LabForCode Local Development Dockerfile
+FROM node:18-alpine AS base
 
 # Install language runtimes and Docker CLI
 RUN apk add --no-cache \
@@ -35,25 +28,37 @@ RUN addgroup coderunner docker
 
 WORKDIR /app
 
-# Copy dependencies and build
-COPY --from=builder /app/node_modules ./node_modules
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Copy package files first for better caching
+COPY package*.json ./
+COPY pnpm-lock.yaml ./
+
+# Install dependencies
+RUN pnpm install --frozen-lockfile
+
+# Copy source code
 COPY . .
 
-# Build Next.js app
-RUN npm run build
+# Build the application
+RUN pnpm build
 
 # Set permissions
 RUN chown -R coderunner:coderunner /app
 RUN mkdir -p /tmp/code-execution && chown coderunner:coderunner /tmp/code-execution
 
-# Copy and set executable permissions for startup scripts
-COPY scripts/ ./scripts/
-RUN chmod +x ./scripts/start-production.sh
+# Set executable permissions for startup scripts
+RUN chmod +x ./scripts/*.sh
 
 # Switch to non-root user
 USER coderunner
 
 EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
+  CMD curl -f http://localhost:3000/api/health || exit 1
 
 # Use production startup script
 CMD ["./scripts/start-production.sh"]

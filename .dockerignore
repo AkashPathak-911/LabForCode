@@ -1,0 +1,70 @@
+# Docker ignore file for LabForCode
+# Development files
+.git
+.gitignore
+README.md
+CHANGELOG.md
+ANALYSIS.md
+DEPLOYMENT.md
+DEPLOY-RAILWAY.md
+RAILWAY-FIX.md
+
+# Environment files
+.env
+.env.local
+.env.example
+.env.railway
+
+# Dependencies (installed inside container)
+node_modules
+.pnpm-store
+
+# Build artifacts
+.next
+out
+dist
+build
+
+# Runtime files
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing
+.nyc_output
+coverage
+*.lcov
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (avoid recursion)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Temp directories
+tmp
+temp
+.tmp
+
+# Railway and cloud files
+.railway
+.nixpacks.toml
+.railwayignore
+railway.json
+
+# Documentation
+docs
+*.md

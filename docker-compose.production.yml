@@ -6,7 +6,9 @@ version: "3.8"
 services:
   # Main Application
   codelab-app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.production
     container_name: codelab-app
     ports:
       - "3000:3000"

@@ -33,11 +33,15 @@ LabForCode is a **completely original**, high-performance code execution engine 
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd CodeLabRunner
+git clone https://github.com/AkashPathak-911/LabForCode.git
+cd LabForCode
 
-# Start all services
-docker-compose up -d
+# For local development (DB + Redis only)
+docker-compose -f docker-compose.local.yml up -d
+pnpm install && pnpm dev
+
+# OR for full production setup
+docker-compose -f docker-compose.production.yml up -d
 
 # Open in browser
 open http://localhost:3000
@@ -267,14 +271,30 @@ USE_RUST_ENGINE=true
 RUST_ENGINE_URL=http://rust-engine:8080
 ```
 
-### **🐳 Docker Services**
+### **🐳 Docker Setup**
 
-The `docker-compose.yml` includes:
+We've simplified the Docker configuration to just what you need:
 
-- **app**: Main Next.js application
-- **postgres**: PostgreSQL database
-- **redis**: Redis for job queue
-- **rust-engine**: High-performance Rust execution engine
+**For Local Development:**
+
+```bash
+# Start just PostgreSQL and Redis
+docker-compose -f docker-compose.local.yml up -d
+```
+
+**For Full Production:**
+
+```bash
+# Complete containerized setup
+docker-compose -f docker-compose.production.yml up -d
+```
+
+**Available Files:**
+
+- `Dockerfile` - Main application container
+- `docker-compose.local.yml` - Minimal setup (DB + Redis only)
+- `docker-compose.production.yml` - Full production stack
+- `rust-engine/Dockerfile` - Rust microservice container
 
 ---
 
@@ -478,5 +498,6 @@ See [DISCLAIMER.md](DISCLAIMER.md) for complete legal information.
 ---
 
 **🚀 Ready to get started? Run `./start-windows.bat` and experience the future of code execution!**
-#   L a b F o r C o d e  
+#   L a b F o r C o d e 
+ 
  
